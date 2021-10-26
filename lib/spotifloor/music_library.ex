@@ -18,9 +18,13 @@ defmodule Spotifloor.MusicLibrary do
     end
   end
 
-  def get_tracks_by_music_style([%Track{music_style: music_style} = track | tail] = music_library, requested_music_style, result)
-    when music_style == requested_music_style do
-      get_tracks_by_music_style(tail, requested_music_style, result ++ [track])
+  def get_tracks_by_music_style(
+        [%Track{music_style: music_style} = track | tail] = music_library,
+        requested_music_style,
+        result
+      )
+      when music_style == requested_music_style do
+    get_tracks_by_music_style(tail, requested_music_style, result ++ [track])
   end
 
   def get_tracks_by_music_style([head | tail] = music_library, requested_music_style, result) do
