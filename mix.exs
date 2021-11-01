@@ -5,7 +5,6 @@ defmodule Spotifloor.MixProject do
     [
       app: :spotifloor,
       version: "0.1.0",
-      elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       preferred_cli_env: ["white_bread.run": :test, xref: [exclude: [Gherkin.Parser]]]
