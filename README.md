@@ -1,6 +1,6 @@
 # Spotifloor
 
-**TODO: Add description**
+**TODO: A music library**
 
 ## Installation
 
@@ -18,4 +18,12 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/spotifloor](https://hexdocs.pm/spotifloor).
+
+Elixir can be installed following the link below: https://elixir-lang.org/install.html
+
+Install dependencies with ```mix deps.get```
+
+Run tests with the command: ```mix test```
+
+Run features test with the command: ```mix white_bread.run```
 
