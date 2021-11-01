@@ -3,13 +3,11 @@ defmodule Contexts.ListenerContext do
   alias Spotifloor.Listener
 
   given_ "a listener", fn state ->
-    listener = %Listener{first_name: "listener_first_name", last_name: "listener_last_name", premium: "false"}
-    {:ok, Map.put(state, :listener, listener)}
+    #given_listener
   end
 
   given_ "a premium listener", fn state ->
-    listener = %Listener{first_name: "listener_first_name", last_name: "listener_last_name", premium: "true"}
-    {:ok, Map.put(state, :listener, listener)}
+    #given_premium_listener
   end
 
 end
