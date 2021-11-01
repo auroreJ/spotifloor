@@ -3,4 +3,5 @@ defmodule Contexts.SearchForMusicTracksContext do
 
   import_steps_from Contexts.ListenerContext
   import_steps_from Contexts.MusicLibraryContext
+  import_steps_from Contexts.TrackListContext
 end

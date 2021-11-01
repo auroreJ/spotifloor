@@ -1,4 +1,11 @@
 defmodule Spotifloor.Track do
-  @enforce_keys [:music_style, :title, :artist]
-  defstruct music_style: nil, title: "", artist: "", preview: false
+  use TypedStruct
+
+  @typedoc "A track structure"
+  typedstruct enforce: true do
+    field(:music_style, atom())
+    field(:title, String.t())
+    field(:artist, String.t())
+    field(:preview, boolean(), default: "false")
+  end
 end

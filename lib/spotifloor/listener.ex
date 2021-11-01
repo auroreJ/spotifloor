@@ -1,10 +1,10 @@
 defmodule Spotifloor.Listener do
-  defstruct first_name: "", last_name: "", track_list: [], premium_member: false
+  use TypedStruct
 
-  alias Spotifloor.Listener
-  alias Spotifloor.MusicLibrary
-
-  def get() do
-    %Listener{first_name: "listener_first_name", last_name: "listener_last_name", track_list: []}
+  @typedoc "A listener structure"
+  typedstruct enforce: true do
+    field(:first_name, String.t())
+    field(:last_name, String.t())
+    field(:premium, boolean(), default: "false")
   end
 end

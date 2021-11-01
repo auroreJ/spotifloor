@@ -75,6 +75,157 @@
         "name": "A listener requests a music style belonging to the music library",
         "keyword": "Scenario",
         "id": "search-tracks-for-a-specific-music-style;a-listener-requests-a-music-style-belonging-to-the-music-library"
+      },
+      {
+        "tags": [],
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "a premium listener",
+            "match": {},
+            "line": 12,
+            "keyword": "Given ",
+            "doc_string": {
+              "value": "",
+              "line": 13,
+              "content_type": ""
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "the music library has previews for the classical style",
+            "match": {},
+            "line": 13,
+            "keyword": "And ",
+            "doc_string": {
+              "value": "",
+              "line": 14,
+              "content_type": ""
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "the listener requests tracks for the \"classical\" music style",
+            "match": {},
+            "line": 14,
+            "keyword": "When ",
+            "doc_string": {
+              "value": "",
+              "line": 15,
+              "content_type": ""
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "the premium listener has access to \"classical\" previews",
+            "match": {},
+            "line": 15,
+            "keyword": "Then ",
+            "doc_string": {
+              "value": "",
+              "line": 16,
+              "content_type": ""
+            }
+          }
+        ],
+        "name": "A premium listener requests a music style belonging to the music library",
+        "keyword": "Scenario",
+        "id": "search-tracks-for-a-specific-music-style;a-premium-listener-requests-a-music-style-belonging-to-the-music-library"
+      },
+      {
+        "tags": [],
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "a listener",
+            "match": {},
+            "line": 19,
+            "keyword": "Given ",
+            "doc_string": {
+              "value": "",
+              "line": 20,
+              "content_type": ""
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "the music library has previews for the classical style",
+            "match": {},
+            "line": 20,
+            "keyword": "And ",
+            "doc_string": {
+              "value": "",
+              "line": 21,
+              "content_type": ""
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "the listener requests tracks for the \"classical\" music style",
+            "match": {},
+            "line": 21,
+            "keyword": "When ",
+            "doc_string": {
+              "value": "",
+              "line": 22,
+              "content_type": ""
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "the listener gets the \"classical\" tracks",
+            "match": {},
+            "line": 22,
+            "keyword": "Then ",
+            "doc_string": {
+              "value": "",
+              "line": 23,
+              "content_type": ""
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "name": "there is no previews amongst the tracks",
+            "match": {},
+            "line": 23,
+            "keyword": "But ",
+            "doc_string": {
+              "value": "",
+              "line": 24,
+              "content_type": ""
+            }
+          }
+        ],
+        "name": "A listener requests a music style having previews",
+        "keyword": "Scenario",
+        "id": "search-tracks-for-a-specific-music-style;a-listener-requests-a-music-style-having-previews"
       }
     ],
     "description": ""

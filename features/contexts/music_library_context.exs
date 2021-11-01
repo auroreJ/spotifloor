@@ -1,23 +1,27 @@
 defmodule Contexts.MusicLibraryContext do
   use WhiteBread.Context
-  alias Spotifloor.MusicLibrary
+  alias Spotifloor.{MusicStyle, Track}
 
   given_ ~r/^the music library is composed of classical, funk, rock tracks$/, fn state ->
-    music_library = MusicLibrary.get_tracks()
-    {:ok, state |> Map.put(:music_library, music_library)}
+      music_library =
+        [
+          %Track{music_style: MusicStyle.funk, title: "September", artist: "Earth Wind and Fire", preview: "false"},
+          %Track{music_style: MusicStyle.rock, title: "Bohemian Rhapsody", artist: "Queen", preview: "false"},
+          %Track{music_style: MusicStyle.classical, title: "9th Symphony", artist: "Beethoven", preview: "false"}
+        ]
+
+      {:ok, state |> Map.put(:music_library, music_library)}
   end
 
-  when_ ~r/^the listener requests tracks for the "(?<music_style>[^"]+)" music style$/,
-        fn state, %{music_style: music_style} ->
-          track_list =
-            state.music_library |> MusicLibrary.get_tracks_by_music_style(String.to_atom(music_style))
+  given_ ~r/^the music library has previews for the classical style$/, fn state ->
+      music_library =
+        [
+          %Track{music_style: MusicStyle.funk, title: "September", artist: "Earth Wind and Fire", preview: "false"},
+          %Track{music_style: MusicStyle.rock, title: "Bohemian Rhapsody", artist: "Queen", preview: "false"},
+          %Track{music_style: MusicStyle.classical, title: "9th Symphony", artist: "Beethoven", preview: "false"},
+          %Track{music_style: MusicStyle.classical, title: "20th Symphony", artist: "Beethoven", preview: "true"}
+        ]
 
-          {:ok, state |> Map.put(:track_list, track_list)}
-        end
-
-  then_ ~r/^the listener gets the "(?<music_style>[^"]+)" tracks/, fn state, %{music_style: music_style} ->
-    {:ok, track_list} = state.track_list
-    assert List.first(track_list).music_style == String.to_atom(music_style)
-    :ok
+      {:ok, state |> Map.put(:music_library, music_library)}
   end
 end
