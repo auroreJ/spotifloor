@@ -3,3 +3,5 @@
 _build
 deps
 *.iml
+report.html
+report.json
